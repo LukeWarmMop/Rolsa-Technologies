@@ -1,0 +1,534 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+	font-size: 16px !important;
+	font-family: Arial, sans-serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.break {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.break p {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.line {
+	border-top: 1px solid black;
+	width: 100%
+}
+
+
+
+footer {
+	height: 100%;
+	background: rgb(28,11,91);
+	background: -moz-linear-gradient(0deg, rgba(28,11,91,1) 21%, rgba(84,70,139,1) 44%, rgba(87,72,143,1) 66%);
+	background: -webkit-linear-gradient(0deg, rgba(28,11,91,1) 21%, rgba(84,70,139,1) 44%, rgba(87,72,143,1) 66%);
+	background: linear-gradient(0deg, rgba(87,72,143,1) 2%), rgba(84,70,139,1) 45%, rgba(28,11,91,1) 20%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c0b5b",endColorstr="#57488f",GradientType=1);
+
+}
+
+footer > p {
+	padding-top: 200px;
+	color: white;
+}
+
+.navbar {
+	background-color: #362D59;
+}
+
+#navbar-main .nav > li > a {
+    color: white !important; 
+}
+
+#navbar-main .nav > li > a:hover {
+    color: gray !important; 
+}
+
+
+.navbar .navbar-brand {
+    color: white;
+	transition: transform 0.2s;
+}
+
+.navbar .navbar-brand:hover {
+    color: gray;
+	transform: scale(1.1);
+}
+
+.login-container {
+	display: flex;
+	float: right;
+	flex-direction: column;
+	width: 40%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+.loginbtn input{
+	width:10%;
+	margin-left: 20px;
+	text-decoration: none;
+	align-content: center;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+	background-color: #362D59;
+}
+
+
+.cover-container {
+	width: 60%;
+	height: 100vh;
+}
+
+.cover {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	align-content: center;
+	background-color:  #362D59;
+}
+
+.cover h1 {
+	color: white;
+	font-size: 5vh;
+}
+
+.cover p {
+	color: white;
+	font-size: 3vh;
+}
+
+.cover-btns {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	transform: translateY(-330px);
+	width: fit-content;
+}
+
+.cover-btns a {
+	border: 3px solid #5E4EA3;
+	margin-top: 1px;
+	padding: 40px;
+	border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+	background-color: #8577A9;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+
+	
+}
+
+.cover-btns a:hover {
+	background-color: #73689E
+}
+
+.google-button {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	
+}
+
+.google-button img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	transition: transform 0.2s;
+}
+
+.google-button img:hover {
+	transform: scale(1.1)
+}
+
+.jumbotron {
+	margin-top: 20px;
+	color: white;
+	background-color: #362D59;
+}
+
+.col-md-4 {
+	text-align: center;
+	
+}
+
+
+.col-md-4 > p > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	width: 100%;
+	margin-bottom: 30px;
+	border: 3px solid #362D59;
+	border-radius: 15px;
+	transition: transform 0.2s;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.col-md-4 > p > a:hover {
+	transform: scale(1.1);
+	border-color: #362D59;
+	background-color: light-gray;
+}
+
+
+
+figcaption {
+	width:100%;
+	margin-bottom: 30px;
+}
+
+.row {
+	border-top: 1px solid black;
+}
+
+.row h1 {
+	text-align: center;
+}
+
+.row p {
+	text-align: center;
+	font-size: 25px;
+}
+
+.col-md-3 {
+	width: 50%;
+	text-align: center;
+	
+}
+
+.col-md-3 > p > a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 900px;
+	width: 100%;
+	margin-bottom: 30px;
+	border: 3px solid #362D59;
+	border-radius: 15px;
+	transition: transform 0.2s;
+}
+
+.col-md-3 > p > a:hover {
+	transform: scale(1.03);
+	border-color: #362D59;
+	background-color: light-gray;
+}
+
+#content {
+	display: none;
+}
+
+#contact > p > a {
+	border: 3px solid #362D59;
+	border-radius: 15px;
+	transition: transform 0.2s;
+}
+
+#contact > p > a:hover {
+	transform: scale(1.03);
+	border-color: #362D59;
+	background-color: light-gray;
+}
+
+
+.main-buttons {
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	gap: 10%;
+	margin: 10px;
+}
+
+.secondary-buttons > .selectSection {
+    flex-grow: 1;
+    justify-content: space-around;
+	margin-top: 60px;
+}
+
+.button {
+	font-size: 25px;
+	background-color: white;
+	text-decoration: none;
+	border: 1px solid #362D59;
+	border-radius: 15px;
+	transition: transform (0.2s)
+}
+
+.button:hover {
+	background-color: #362D59;
+	color: white;
+	transform: scale(1.1);
+}
+
+.selectSection {
+	display: none;
+}
+
+.content {
+	display: none;
+}
+
+.content > img {
+	border: 2px solid #362D59;
+	float: right;
+	width: 200px;
+}
+
+.error {
+	margin-top: 5px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	width: fit-content;
+	border-radius: 5px;
+}
+
+.tools-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.calculate {
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: white;
+} 
+
+.tools-inputs input {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.tools-inputs label {
+	margin-top: 10px;
+}
+
+.tool-result {
+	margin-top: 20px;
+	border-top: 1px solid black;
+	font-size: 15px;
+	font-weight: bold;
+	width: 40%;
+}
+
+.booking-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.booking-form label {
+	margin-top: 10px;
+}
+
+
+.booking-form input, select {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.booking-form button {
+	width: 20%;
+	margin-top: 10px;
+	border:1px solid black;
+	border-radius: 15px;
+	padding: 5px;
+	background-color: #362D59;
+	color:white
+}
+
+.booking-form button:hover{
+	background-color:white;
+	color: black;
+}
+
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+	width: 100%;
+	max-width: 100%;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.login-inputs input {
+	box-sizing: border-box !important;
+	width: 100% !important;
+	border-radius: 5px;
+	margin: 15px;
+}
+
+
+.loginbtn {
+	display: block;
+	margin: 15px auto;
+	width: 25%;
+	border: 1px solid #362D59;
+	border-radius: 5px;
+	background-color: #362D59;
+	color:white;
+} 
+
+.loginbtn:hover {
+	background-color: white;
+	color: #362D59;
+} 
+
+
+
+.accountButtons{
+    display: flex;
+	justify-content: center; 
+	align-items: center;
+	margin: 20px;
+    margin-top: 60px;
+
+}
+
+.accButton {
+	width: auto;
+	flex: 1;
+	margin: 0 50px;
+	margin-top: 5px;
+	background-color: white;
+	border: 1px solid #362D59;
+}
+
+.accButton:hover {
+	background-color: #362D59;
+	color: white;
+}
+
+#accMain{
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+#accInfo{
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 2px;
+	width: 30%;
+	background-color: #D3D3D3;
+}
+
+#booking-table {
+	width: 100%;
+	border: 1px solid black;
+}
+
+#booking-table{
+	
+}
+
+#booking-table th, td{
+	width: 50%;
+	padding: 10px;
+	border: 1px solid black;
+	gap: 10px;
+	
+}
+
+#payment-form{
+	border: 1px solid black;
+	border-radius: 15px;
+	height: auto;
+	padding: 10px;
+	display: flex!important;
+	flex-direction: column;
+}
+
+#payment-form input{
+	margin-top: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	
+}
+#payment-form label{
+	margin-top: 3px;
+}
+
+#payment-form button{
+	margin-top: 10px;
+	width: 20%;
+	border: 1px solid black;
+	border-radius: 15px;
+	background-color: #362D59;
+	color: white;
+}
+
+#payment-form button:hover {
+	background-color: white;
+	color: black;
+}

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Rolsa Technologies</h1>
+    <p class="lead">Bringing Green Energy To You</p>
+</div>
+
+<div class="row">
+    <div>
+        <h1>Learn More About Green Technologies</h1>
+        <p>
+            Want to learn more about some of the leading green technologies today? Click on one of the 3 buttons to get a few interesting facts about
+            some of the green technologies that we offer here at Rolsa Technologies where we bring Green Energy To You!!
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Solar Panels</h2>
+        <p><a class="btn btn-default" href="{{ url_for('information') }}">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>EV Chargers</h2>
+        <p><a class="btn btn-default" href="{{ url_for('information') }}">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Home Energy Systems</h2>
+        <p><a class="btn btn-default" href="{{ url_for('information') }}">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div>
+        <h1>Book Yours Today!</h1>
+    </div>
+    <div class="col-md-4">
+        <h2>Solar Panels</h2>
+        <p><a class="btn btn-default" href="{{ url_for('booking') }}" style="background-image: url(https://images.pexels.com/photos/9893729/pexels-photo-9893729.jpeg?auto=compress&cs=tinysrgb&w=400)"></a></p>
+        <figcaption>
+            Book your Solar Panel consultation today! Or have one of our experts
+            come in and install brand-new solar panels at your convenience!
+        </figcaption>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>EV Chargers</h2>
+        <p><a class="btn btn-default" href="{{ url_for('booking') }}"  style="background-image: url(https://media.istockphoto.com/id/1564615208/photo/ev-charging-stations-or-electric-vehicle-recharging-stations-with-graphic-display.jpg?b=1&s=612x612&w=0&k=20&c=UAMP16h0okaZx1bGye2u7M1FOLFxuRuGb1J34RtHATs=)"></a></p>
+        <figcaption>
+            Book your EV Charger consultation today! Or have one of our experts
+            come in and install a brand-new EV Charger at your convenience!
+        </figcaption>
+    </div>
+    <div class="col-md-4">
+        <h2>Home Energy Systems</h2>
+        <p><a class="btn btn-default" href="{{ url_for('booking') }}"  style="background-image: url(https://images.pexels.com/photos/16423104/pexels-photo-16423104/free-photo-of-smart-home-control.jpeg?auto=compress&cs=tinysrgb&w=400)"></a></p>
+        <figcaption>
+            Book your HEM consultation today! Or have one of our experts
+            come in and install a brand-new Smart Home Energy System at your convenience!.
+        </figcaption>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+        <h1>Get in Contact!</h1>
+        <p>
+            Get in contact today with us to discuss any questions you have! One of our support staff will be with you as soon
+            as possible to help you with anything on our page!
+        </p>
+        <div id="contact">
+        <p><a class="btn btn-default" href="{{ url_for('contact') }}">Contact Us &raquo;</a></p>
+        </div>
+</div>
+{% endblock %}

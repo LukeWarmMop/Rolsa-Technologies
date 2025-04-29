@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h3>Hello, {{fname}}</h3>
+
+
+
+<div class="accountButtons">
+    <div id ="option1-buttons" class="selectSection1" style="display: block;">
+        <button class="accButton" data-number="1">My Information</button>
+        <button class="accButton" data-number="2">Payment & Billing</button>
+        <button class="accButton" data-number="3">Booking Information</button>
+        <button class="accButton" data-number="4">Edit Preferences</button>
+    </div>
+</div>
+
+<div class="accContent">
+    <div class="content" data-number="1" id="accMain">
+        <p class="content" data-number="1" id="accInfo">First Name: {{fname}}</p><br>
+        <p class="content" data-number="1" id="accInfo">Last Name: {{lname}}</p><br>
+        <p class="content" data-number="1" id="accInfo">Email: {{email}}</p><br>
+    </div>
+
+    <div class="content" data-number="2">
+
+        <div id="view-payments">
+            <table id="booking-table">
+                <thead>
+                    <tr>
+                        <th>Cardholder Name</th>
+                        <th>Expiration Date</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-rows">
+                    {% for card in cards %}
+                    <tr>
+                        <td>{{ card[0] }}</td> 
+                        <td>{{ card[1] }}</td> 
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+
+        Add New Payment Methods
+            <form method="post" id="payment-form" action='/account'>
+                <label for="cardholder-name">Cardholder Name:</label>
+                <input type="text" name="cardholder-name" id="cardholder-name" placeholder="Enter cardholder name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" name="card-number" id="card-number" placeholder="1234 5678 9012 3456" required pattern="\d{16}">
+
+                <label for="expiration-date">Expiration Date:</label>
+                <input type="month" name="expiration-date" id="expiration-date" required>
+
+                <label for="cvv">CVV/CVC:</label>
+                <input type="text" name="cvv" id="cvv" placeholder="123" required pattern="\d{3,4}">
+
+                <label for="billing-address">Billing Address:</label>
+                <input type="text" name="billing-address" id="billing-address" placeholder="Enter billing address" required>
+
+                <!-- Confirm Booking Button -->
+                <label>
+                    <input type="checkbox" id="save-card" name="save-card" value="save">
+                    Confirm to Save
+                </label>
+
+                <button type="submit" id="save-payment">Save</button>
+            </form>
+
+
+    </div>
+
+    <div class="content" data-number="3">
+        
+        <table id="booking-table">
+            <thead>
+                <tr>
+                    <th>Booking Type</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="booking-rows">
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking[0] }}</td> <!-- Booking Type -->
+                    <td>{{ booking[1] }}</td> <!-- Date -->
+                    <td>{{ booking[2] }}</td> <!-- Time -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        
+        
+        
+        
+        
+
+    </div>
+
+    <div class="content" data-number="4">
+        <p">Change Font Size:</p>
+        <select id="font-size-selector">
+            <option value="12px">Small</option>
+            <option value="16px" selected>Medium</option>
+            <option value="20px">Large</option>
+          </select>
+          
+
+        
+
+        </div>
+</div>
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", ShowContent());
+
+document.getElementById('button1').addEventListener('click', function() {
+	var btn1options = document.getElementById('option1-buttons');
+	if (btn1options.style.display === 'none' || btn1options.style.display === '')
+{
+		HideAllBtns()
+		btn1options.style.display = 'flex';
+	} else {
+		btn1options.style.display = 'none';
+	}
+})
+
+function HideAllBtns() {
+	document.getElementById('option1-buttons').style.display = 'none';
+}
+
+
+function ShowContent() {
+    let Buttons = document.querySelectorAll(".selectSection1 .accButton");
+
+    for (let button of Buttons) {
+        button.addEventListener('click', (e) => {
+
+            const clickedButton = e.target;
+
+            const active = document.querySelector(".active");
+
+            if (active) {
+                active.classList.remove("active");
+            }
+
+            clickedButton.classList.add("active");
+
+            let allContent = document.querySelectorAll(".content");
+
+            for (let content of allContent) {
+
+                if (content.getAttribute('data-number') === button.getAttribute('data-number')) {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        });
+    }
+}
+
+document.getElementById("font-size-selector").addEventListener("change", function() {
+  const selectedSize = this.value; // Retrieve the selected font size
+  document.body.style.fontSize = selectedSize; // Apply the change to the body
+});
+
+
+
+
+	
+</script>
+{% endblock %}

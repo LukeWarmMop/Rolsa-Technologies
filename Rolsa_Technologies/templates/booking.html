@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Booking</h1>
+
+<div class="payment-booking">
+    <form method="post" class="booking-form" id="booking-form">
+        <!-- Booking Details -->
+        <label for="type">Select Booking Type:</label>
+        <select name="type" id="booking-type">
+            <option value="consultation">Consultation</option>
+            <option value="installation">Installation</option>
+        </select>
+
+        <label for="date">Select Date:</label>
+        <input type="date" name="date" id="consultation-date" required>
+
+        <label for="time">Select Time:</label>
+        <select name="time" id="consultation-time">
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="13:00">13:00 PM</option>
+            <option value="14:00">14:00 PM</option>
+            <option value="15:00">15:00 PM</option>
+            <option value="16:00">16:00 PM</option>
+        </select>
+        <!-- Confirm Booking Button -->
+        <button type="submit" id="confirm-booking">Confirm Booking</button>
+    </form>
+    
+    <p>
+        {{message}}
+    </p>
+</div>
+
+    
+
+
+{% endblock %}

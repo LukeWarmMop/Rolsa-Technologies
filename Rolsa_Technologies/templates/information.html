@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="main-buttons">
+    <div id="button1">
+        <button class="button">Green Energy Products</button>
+    </div>
+
+    <div id="button2">
+        <button class="button">Your Carbon Footprint</button>
+    </div>
+</div>
+
+<div class="secondary-buttons">
+    <div id = "option1-buttons" class="selectSection">
+        <button class="button" data-number="1">Solar Panels</button>
+        <button class="button" data-number="2">EV Chargers</button>
+        <button class="button" data-number="3">Home Energy Systems</button>
+    </div>
+
+    <div id = "option2-buttons" class="selectSection">
+        <button class="button" data-number="4">What is it?</button>
+        <a href="{{ url_for('tools') }}">
+            <button class="button">Calculate yours now!</button>
+        </a>
+        
+    </div>
+</div>
+<div class="contentSection">
+    <div class="content" data-number="1">
+        <img src="https://media.istockphoto.com/id/1411002313/photo/solar-photovoltaic-panels-on-a-house-roof-sunset.jpg?b=1&s=612x612&w=0&k=20&c=jkEa6dTtraMHHmQXPqs4H06ks019HLHXESTo8afldBE=">
+        <h1>What are Solar Panels?</h1>
+        
+        <p>
+            Solar Panels are usually large panels made up of solar cells.
+            These are made of a material called silicon and allow the solar
+            celss to convert light from the sun into usable electricity for 
+            your home!
+        </p>
+        
+        <br>
+        <h1>How do they Work?</h1>
+        <p>
+            Without getting too technical, solar panels work when sunlight hits
+            the layers of silicon inside the solar cells, causing an electrical
+            charge to build up.
+            <br>
+            As you probably have seen, Solar Panels are mainly located on the 
+            roof of buildings to get as much exposure to the sun, for example
+            in the Northen Hemisphere, a solar panel will work at its best when
+            facing South. This gives the panel as much exposure to the sun as possible
+            during the day.
+        </p>
+    </div>
+    
+    <div class="content" data-number="2">
+
+        <h1>What are EV Chargers?</h1>
+        <p>EV chargers are devices used to recharge electric vehicles (EVs). They come in various forms and power levels, allowing EV owners to charge their cars at home, at work, or at public charging stations. Chargers are categorized into three main types: Level 1, Level 2, and DC fast chargers, with differences in speed and power.</p>
+        
+        <h1>How do they Work?</h1>
+        <p>Without getting too technical, EV chargers work by transferring electricity from a power source to the battery of an electric vehicle. When you plug the charger into the car, it communicates with the vehicle to regulate and manage the charging process safely.</p>
+        
+        <ul>
+            <li>Level 1 chargers use a standard household outlet, offering slow but accessible charging.</li>
+            <li>Level 2 chargers are faster and usually require a dedicated circuit, often found in homes, businesses, or public stations.</li>
+            <li>DC fast chargers provide rapid charging by delivering high voltage directly to the car's battery.</li>
+        </ul>
+        
+        <p>To maximize efficiency, it's best to use chargers compatible with your specific EV model!</p>
+
+
+
+    </div>
+    <div class="content" data-number="3">
+        <h1>What are Smart Home Energy Systems?</h1>
+        <p>Smart home energy systems are advanced setups that allow homeowners to monitor, manage, and optimize their energy usage. They often integrate technologies such as solar panels, battery storage, smart thermostats, and energy-efficient appliances to create a more sustainable and cost-effective home environment.</p>
+        
+        <h1>How do they Work?</h1>
+        <p>Without getting too technical, smart home energy systems work by using sensors, smart devices, and automation to track and control energy consumption. Data from various components, like solar panels or smart meters, is collected and analyzed to provide insights and enable energy-saving adjustments.</p>
+        
+        <ul>
+            <li>Solar panels and battery storage can generate and store renewable energy for later use.</li>
+            <li>Smart thermostats learn your habits and adjust heating or cooling to optimize energy use.</li>
+            <li>Smart plugs and appliances can be controlled remotely to minimize unnecessary energy consumption.</li>
+        </ul>
+        
+        <p>With these systems, homeowners can reduce their carbon footprint and save money while enjoying the convenience of automation and remote control.
+
+    </div>
+    <div class="content" data-number="4">
+        <h1>What is a Carbon Footprint?</h1>
+        <p>A carbon footprint is the total amount of greenhouse gases, primarily carbon dioxide, that are released into the atmosphere as a result of human activities. This includes everything from driving a car to producing the food we eat. Measuring your carbon footprint helps you understand how your lifestyle impacts the environment.</p>
+        
+        <h1>How to Reduce Your Carbon Footprint?</h1>
+        <p>There are many ways to reduce your carbon footprint. By making small changes to your daily habits and choices, you can significantly lower your environmental impact.</p>
+        
+        <ul>
+            <li>Use energy-efficient appliances and light bulbs to save electricity.</li>
+            <li>Choose renewable energy sources, like solar or wind power, for your home.</li>
+            <li>Walk, bike, carpool, or use public transport instead of driving alone.</li>
+            <li>Reduce, reuse, and recycle to minimize waste.</li>
+            <li>Eat locally produced and plant-based foods to lower emissions from food transportation and production.</li>
+            <li>Plant trees and support reforestation projects to offset carbon emissions.</li>
+        </ul>
+        
+        <p>By adopting these practices, you can make a positive impact on the environment and help combat climate change!</p>
+    </div>
+</div>
+
+{% endblock %}

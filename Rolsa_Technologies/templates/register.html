@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Rolsa Technologies</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+
+    <style>
+        html, body, #full {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+    
+
+    <div class="login-container">
+
+            <form action="" method="post" class="login-form">
+
+                <div class="login-inputs">
+                    <h1> Sign Up!</h1>
+
+                    <input type="text" class="form-control" placeholder="First Name" name="fname">
+                    <input type="text" class="form-control" placeholder="Last Name" name="lname">
+                    
+                    <input type="text" class="form-control" placeholder="Email" name="email">
+                    
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <input type="password" class="form-control" placeholder="Password" name="passwordcheck">
+
+                </div>
+                
+                <p class="error">{{message}}</p>
+                
+                <input type="submit" name="Create Account" value="Create Account" class="loginbtn">
+            </form>
+
+            <div class="break">
+                <div class="line"></div>
+                <p>or</p>
+                <div class="line"></div>
+            </div>
+    
+            <div class="google-button">
+                <a href="{{ url_for('home') }}"><img src="https://i0.wp.com/raw.githubusercontent.com/react-native-community/react-native-google-signin/HEAD/img/signin-button.png"></a>
+            </div>
+    </div>
+
+
+    <div class="cover-container">
+        <div class="cover">
+            <h1>Rolsa Technologies</h1>
+            <p>Bringing Green Energy To You </p>
+
+            <div class="cover-btns">
+                <a href="{{ url_for('register') }}">Register</a>
+                <a href="{{ url_for('login') }}">Login</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    <script src="/static/scripts/extra.js"></script>
+
+
+</body>
+</html>

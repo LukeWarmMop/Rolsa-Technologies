@@ -24,4 +24,6 @@ If website does not automatically open please follow steps below
 
 Edit Preferences: This feature is currently non-functional. This is an expected issue and does not require flagging.
 
+Login with Google: This feature is currently non-functional. This is an expected issue
+
 
